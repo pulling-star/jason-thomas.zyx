@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if entries|length > 0 %}
+    <p class=dateText>{{ entries[postNum].date|safe }}</p><h2>{{ entries[postNum].title }}</h2>{{ entries[postNum].text|safe }}
+  {% else %}
+    <em>Why not say something?</em>
+  {% endif %}
+  <!--
+  {% for entry in entries %}
+    <li><p class=dateText>{{ entry.date|safe }}</p><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
+  {% else %}
+    <li><em>Why not say something?</em>
+  {% endfor %}
+  -->
+{% endblock %}

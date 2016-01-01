@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Cabin;
+    src: url(Cabin_font/Cabin-Regular.otf);
+}
+
+body {
+    font-family: Cabin, helvetica;
+    background-color: #F5F9F7;  //#FFFEFA;
+    height:100%;
+    color: #1A202C;
+}
+
+a,h2,h3 {
+    color: #175D58;
+}
+
+h1,h2,h3,h4{
+	letter-spacing: 0.6px;
+//	margin-left: -0.8em;
+}
+
+h1, h2 {
+    font-size: 1.4em;
+}
+
+input, textarea{
+	width:100%;
+}
+
+blockquote{
+	padding-left:0.75em;
+	border-left: 2px solid #BBB8B1;
+	margin-left:0.75em;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+form *{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.archiveLink {
+	margin-bottom: 3em;
+    list-style: none;
+	padding-left:0.75em;
+	border-left: 2px solid #BBB8B1;
+	margin-left:0.75em;
+	cursor:pointer;
+}
+
+.entries{
+	padding-left:0;
+}
+
+#cheatSheet * {
+	margin-left:5px;
+	margin-right:5px;	
+//	display:inline-block;
+}
+
+.topBanner{
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.topBanner h1{
+//	border-bottom: 1px solid #eee;
+	margin-bottom:5px;
+	font-size:170%;
+	letter-spacing:5px;
+	margin-left:7px;
+}
+
+.topBanner h4{
+	letter-spacing:0.9px;
+	margin-top:5px;
+	color: #175D58;
+}
+
+.page {
+    margin: 1em auto;
+    max-width:550px;
+    padding: .8em;
+}
+
+.add-entry {
+    font-size: .9em;
+    border-bottom: 1px solid #ccc;
+}
+
+.add-entry dl {
+    font-weight: 700;
+}
+
+.metanav, .topLinks {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0.3em;
+}
+
+.topLinks * {
+    margin: 0.75em;
+    margin-top: 0;    
+}
+
+.flash {
+	color: #175D58;  //#4FA2A0; //#0EB186; //#D48015
+}
+
+.error {
+    background: #f0d6d6;
+    padding: .5em;
+}
+
+.dateText{
+	margin-bottom:0px;
+	color: #7B776D;
+	font-size:90%;
+}
+
+.hljs{
+	background-color:#EAEBF1;
+}
+
+.hljs-keyword{
+	color: #175D58;
+}
+.hljs-params{
+	color: #175D58;
+}
+
+.hljs-string, .hljs-number, .hljs-title{
+	color: #D13F31;
+}
+
+//Colour scheme here - http://www.colorcombos.com/color-schemes/378/ColorCombo378.html

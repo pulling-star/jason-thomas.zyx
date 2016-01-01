@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>       
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
+    <h4>Cheat sheet</h4>
+    <div id='cheatSheet'>
+      <h1>#h1</h1>
+      <h2>##h2</h2>
+      <h3>###h3</h3>
+      <h4>####h4</h4>
+      <h4>####h4</h4>
+      <pre>```inline code```</pre>
+      <p>[text](urlLink)</p>
+      <p>![altText](imgLink)</p>
+      <pre><code>print '''Each line in<br>this code block'''<br>rest=['has been', 'indented four spaces']<br>print rest[0], rest[1]</code></pre><br>
+      <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links" target="_target">more tips</a>
+    </div>
+  {% endif %}
+{% endblock %}
