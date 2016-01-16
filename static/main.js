@@ -2,10 +2,9 @@ $('.topBanner').on('click', function(){
     window.location.assign('/');    
 })
 
-$('.archiveLink').on('click', function(){
+$('.archiveLink a').each(function(i){
+    console.log(i);
     var liCount = $('.archiveLink').length-1;
-    var liClicked = $(this).index();
-    var liString = liCount - liClicked
-    var newRequest = '/post?postNum=' + liString.toString() 
-    window.location = newRequest;
+    var newRequest = '/post?postNum=' + (liCount - i); 
+    $(this).attr('href', newRequest);
 })

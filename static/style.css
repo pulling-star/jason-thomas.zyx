@@ -7,6 +7,7 @@ body {
     font-family: Cabin, helvetica;
     background-color: #F5F9F7;  //#FFFEFA;
     height:100%;
+    width:100%;
     color: #1A202C;
 }
 
@@ -14,77 +15,80 @@ a,h2,h3 {
     color: #175D58;
 }
 
-h1,h2,h3,h4{
-	letter-spacing: 0.6px;
-//	margin-left: -0.8em;
+a:link {
+    text-decoration: none;
 }
 
-h1, h2 {
-    font-size: 1.4em;
+h1,h2,h3,h4{
+    letter-spacing: 0.6px;
 }
 
 input, textarea{
-	width:100%;
+    width:100%;
 }
 
 blockquote{
-	padding-left:0.75em;
-	border-left: 2px solid #BBB8B1;
-	margin-left:0.75em;
+    padding-left:0.75em;
+    border-left: 2px solid #BBB8B1;
+    margin-left:0.75em;
 }
 
 img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
 form *{
-	margin-top: 7px;
-	margin-bottom: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .archiveLink {
-	margin-bottom: 3em;
+    margin-bottom: 3em;
     list-style: none;
-	padding-left:0.75em;
-	border-left: 2px solid #BBB8B1;
-	margin-left:0.75em;
-	cursor:pointer;
+    padding-left:0.75em;
+    border-left: 2px solid #BBB8B1;
+    margin-left:0.75em;
+    cursor:pointer;
+}
+
+.archiveLink * {
+    margin-bottom: 0.125em;
+    margin-top: 0.125em;    
 }
 
 .entries{
-	padding-left:0;
+    padding-left:0;
 }
 
 #cheatSheet * {
-	margin-left:5px;
-	margin-right:5px;	
-//	display:inline-block;
+    margin-left:5px;
+    margin-right:5px;    
 }
 
 .topBanner{
-	width: 100%;
-	text-align: center;
-	cursor: pointer;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size
 }
 
 .topBanner h1{
-//	border-bottom: 1px solid #eee;
-	margin-bottom:5px;
-	font-size:170%;
-	letter-spacing:5px;
-	margin-left:7px;
+    font-size: 4.0vh;    
+    margin-bottom:5px;
+    letter-spacing:5px;
+    margin-left:7px;
 }
 
 .topBanner h4{
-	letter-spacing:0.9px;
-	margin-top:5px;
-	color: #175D58;
+    font-size: 3.0vh;    
+    letter-spacing:0.9px;
+    margin-top:5px;
+    color: #175D58;
 }
 
 .page {
-    margin: 1em auto;
-    max-width:550px;
+    margin: 3em auto;
     padding: .8em;
 }
 
@@ -109,7 +113,7 @@ form *{
 }
 
 .flash {
-	color: #175D58;  //#4FA2A0; //#0EB186; //#D48015
+    color: #175D58;  //#4FA2A0; //#0EB186; //#D48015
 }
 
 .error {
@@ -118,24 +122,50 @@ form *{
 }
 
 .dateText{
-	margin-bottom:0px;
-	color: #7B776D;
-	font-size:90%;
+    margin-bottom:0px;
+    color: #7B776D;
+    font-size:90%;
 }
 
 .hljs{
-	background-color:#EAEBF1;
+    background-color:#EAEBF1;
 }
 
 .hljs-keyword{
-	color: #175D58;
+    color: #175D58;
 }
 .hljs-params{
-	color: #175D58;
+    color: #175D58;
 }
 
 .hljs-string, .hljs-number, .hljs-title{
-	color: #D13F31;
+    color: #D13F31;
 }
 
-//Colour scheme here - http://www.colorcombos.com/color-schemes/378/ColorCombo378.html
+h1 {
+  font-size: 4.0vh;
+}
+h2 {
+  font-size: 4.0vh;
+}
+h3 {
+  font-size: 3.5vh;
+}
+h4 {
+  font-size: 3.0vh;
+}
+p, a, code, li {
+  font-size: 2.0vh;
+}
+
+@media screen and (min-device-width: 1200px) /* Desktop */ {
+    .page {
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-device-width: 1200px) /* Mobile */ {
+    .page {
+        width: 95%;
+    }
+}

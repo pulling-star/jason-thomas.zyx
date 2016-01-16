@@ -3,17 +3,10 @@
   <ul class=entries>
   {% if entries|length > 0 %}
     {% for entry in entries|reverse() %}
-      <li class=archiveLink value=><p class=dateText>{{ entry.date|safe }}</p><h2>{{ entry.title }}</h2> <p>{{entry.text|striptags|truncate(100) }}</p>
+      <li class=archiveLink value=><a><p class=dateText>{{ entry.date|safe }}</p><h2>{{ entry.title }}</h2> <p>{{entry.text|striptags|truncate(100) }}</p></a>
     {% endfor %}
   {% else %}
     <li><em>Why not say something?</em>
   {% endif %}
-  <!--
-  {% for entry in entries %}
-    <li><p class=dateText>{{ entry.date|safe }}</p><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
-  {% else %}
-    <li><em>Why not say something?</em>
-  {% endfor %}
-  -->
   </ul>
 {% endblock %}
