@@ -5,14 +5,14 @@
 
 body {
     font-family: Cabin, helvetica;
-    background-color: #F5F9F7;  //#FFFEFA;
+    background-color: #FEFFFE;  //#FFFEFA;
     height:100%;
     width:100%;
     color: #1A202C;
 }
 
 a,h2,h3 {
-    color: #175D58;
+    color: #0C403C;
 }
 
 a:link {
@@ -84,12 +84,17 @@ form *{
     font-size: 3.0vh;    
     letter-spacing:0.9px;
     margin-top:5px;
-    color: #175D58;
+    color: #0C403C;
 }
 
 .page {
     margin: 3em auto;
     padding: .8em;
+    max-width: 800px;
+}
+
+.page a{
+    text-decoration: underline;
 }
 
 .add-entry {
@@ -113,7 +118,7 @@ form *{
 }
 
 .flash {
-    color: #175D58;  //#4FA2A0; //#0EB186; //#D48015
+    color: #0C403C;  //#4FA2A0; //#0EB186; //#D48015
 }
 
 .error {
@@ -132,10 +137,10 @@ form *{
 }
 
 .hljs-keyword{
-    color: #175D58;
+    color: #0C403C;
 }
 .hljs-params{
-    color: #175D58;
+    color: #0C403C;
 }
 
 .hljs-string, .hljs-number, .hljs-title{
@@ -149,23 +154,23 @@ h2 {
   font-size: 4.0vh;
 }
 h3 {
-  font-size: 3.5vh;
+  font-size: 3.6vh;
 }
 h4 {
-  font-size: 3.0vh;
+  font-size: 3.2vh;
 }
 p, a, code, li {
-  font-size: 2.0vh;
+  font-size: 2.7vh;
 }
 
 @media screen and (min-device-width: 1200px) /* Desktop */ {
     .page {
-        max-width: 800px;
+     //   max-width: 800px;
     }
 }
 
-@media screen and (max-device-width: 1200px) /* Mobile */ {
-    .page {
-        width: 95%;
-    }
-}
+//@media screen and (max-device-width: 1200px) /* Mobile */ {
+//    .page {
+//        width: 95%;
+//    }
+//}
