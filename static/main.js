@@ -5,6 +5,6 @@ $('.topBanner').on('click', function(){
 $('.archiveLink a').each(function(i){
     console.log(i);
     var liCount = $('.archiveLink').length-1;
-    var newRequest = '/post?postNum=' + (liCount - i); 
+    var newRequest = 'http://www.jason-thomas.xyz/post?postNum=' + (liCount - i); 
     $(this).attr('href', newRequest);
 })

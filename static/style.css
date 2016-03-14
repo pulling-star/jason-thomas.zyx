@@ -43,6 +43,16 @@ form *{
     margin-bottom: 7px;
 }
 
+.page {
+    margin: 3em auto;
+    padding: .8em;
+    max-width: 800px;
+}
+
+.page a{
+    text-decoration: underline;
+}
+
 .archiveLink {
     margin-bottom: 3em;
     list-style: none;
@@ -54,7 +64,11 @@ form *{
 
 .archiveLink * {
     margin-bottom: 0.125em;
-    margin-top: 0.125em;    
+    margin-top: 0.125em;
+}
+
+.archiveLink a {
+    text-decoration: none;
 }
 
 .entries{
@@ -85,16 +99,6 @@ form *{
     letter-spacing:0.9px;
     margin-top:5px;
     color: #0C403C;
-}
-
-.page {
-    margin: 3em auto;
-    padding: .8em;
-    max-width: 800px;
-}
-
-.page a{
-    text-decoration: underline;
 }
 
 .add-entry {

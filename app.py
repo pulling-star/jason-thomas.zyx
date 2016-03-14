@@ -127,4 +127,4 @@ def pageNotFound(error):
     return render_template('404.html')
 
 if __name__ == '__main__':
-    app.run('0.0.0.0',debug=False) #debug should be False in production
+    app.run('0.0.0.0') #debug should be False in production
