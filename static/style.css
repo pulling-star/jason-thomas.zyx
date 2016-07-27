@@ -7,7 +7,6 @@ body {
     font-family: Cabin, helvetica;
     background-color: #FEFFFE;  //#FFFEFA;
     height:100%;
-    width:100%;
     color: #1A202C;
 }
 
@@ -53,16 +52,16 @@ form *{
     text-decoration: underline;
 }
 
-.archiveLink {
+li {
     margin-bottom: 3em;
     list-style: none;
-    padding-left:0.75em;
+    padding-left:10px;
     border-left: 2px solid #BBB8B1;
-    margin-left:0.75em;
-    cursor:pointer;
+    margin-left:10px;
 }
 
 .archiveLink * {
+    cursor:pointer;
     margin-bottom: 0.125em;
     margin-top: 0.125em;
 }
@@ -71,8 +70,8 @@ form *{
     text-decoration: none;
 }
 
-.entries{
-    padding-left:0;
+ul{
+    padding-left:10px;
 }
 
 #cheatSheet * {
@@ -84,7 +83,6 @@ form *{
     width: 100%;
     text-align: center;
     cursor: pointer;
-    font-size
 }
 
 .topBanner h1{
@@ -92,6 +90,7 @@ form *{
     margin-bottom:5px;
     letter-spacing:5px;
     margin-left:7px;
+    color: #1A202C;
 }
 
 .topBanner h4{
