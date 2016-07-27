@@ -3,7 +3,7 @@
 # all the imports
 import sqlite3, datetime, mistune, os
 from flask import Flask, request, session, g, redirect, url_for, \
-     abort, render_template, flash    
+     abort, render_template, flash
 
 this_dir = os.path.dirname(__file__)
 
@@ -19,14 +19,16 @@ def connect_db():
 
 def getSqlRecords():
     #Cur becomes the SQL request
-    cur = g.db.execute('select title, entryDate, text from entries order by id asc')
+    cur = g.db.execute('select id, title, entryDate, text from entries order by id asc')
     #Entries entered as a param into the show_current.html template.
-    entries = [dict(title=row[0], date=row[1], text=row[2]) for row in cur.fetchall()]
+    entries = [dict(id=row[0], title=row[1], date=row[2], text=row[3]) for row in cur.fetchall()]
     return entries
 
 @app.before_request
 def before_request():
     g.db = connect_db()
+#    if 'https' not in request.url:
+#        return redirect(request.url.replace('http', 'https')) #forcing https for all connections
 
 @app.teardown_request
 def teardown_request(exception):
@@ -56,6 +58,11 @@ def show_post():
 def about():
     session.pop('logged_in', None)
     return render_template('about.html')
+
+@app.route('/my_work')
+def my_work():
+    session.pop('logged_in', None)
+    return render_template('my_work.html')
 
 @app.route('/add', methods=['POST'])
 def add_entry():
