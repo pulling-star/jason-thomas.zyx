@@ -6,7 +6,6 @@ from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
 
 this_dir = os.path.dirname(__file__)
-
 template_path = os.path.join(this_dir, 'templates')
 
 app = Flask(__name__, template_folder=template_path)
@@ -18,10 +17,9 @@ def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
 
 def getSqlRecords():
-    #Cur becomes the SQL request
-    cur = g.db.execute('select id, title, entryDate, text from entries order by id asc')
+    cursor = g.db.execute('select title, entryDate, text from entries order by id asc')
     #Entries entered as a param into the show_current.html template.
-    entries = [dict(id=row[0], title=row[1], date=row[2], text=row[3]) for row in cur.fetchall()]
+    entries = [dict(title=row[0], date=row[1], text=row[2]) for row in cursor.fetchall()]
     return entries
 
 @app.before_request
@@ -73,16 +71,15 @@ def add_entry():
     else:
         if not session.get('logged_in'):
             abort(401)
-        #HEY, look up the significance of SQL injection and ?, ?
         timeNow = datetime.datetime.now()
         readTime = datetime.datetime.strptime(str(timeNow),'%Y-%m-%d %H:%M:%S.%f')
         formattedTime = datetime.datetime.strftime(readTime,'%B %d, %Y @ %H:%M')
+        formattedText = mistune.markdown(request.form['text'], escape=False)
         #You need to have escape=False for Mistune to leave HTML tags alone. You will need to turn this off if you provide untrusted users with a text box
         g.db.execute('insert into entries (title, entryDate, text) values (?, ?, ?)',
-                     [request.form['title'], formattedTime, mistune.markdown(request.form['text'],escape=False)])
+                     [request.form['title'], formattedTime, formattedText])
         g.db.commit()
         flash('New entry was successfully posted')
-        #For the below, do - redirect(url_for('cms')) - if you want to display what was posted immediately after it was posted, on the cms page - this may be useful in future to preview the contnt before it is actually committed.
     return redirect(url_for('cms'))
 
 @app.route('/archive')
@@ -116,8 +113,7 @@ def login():
     else:
         flash('My password totally isn\'t "password"')
     return render_template('login.html', error=error)
-
-@app.route('/logout')
+app.route('/logout')
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
@@ -134,4 +130,4 @@ def pageNotFound(error):
     return render_template('404.html')
 
 if __name__ == '__main__':
-    app.run('0.0.0.0') #debug should be False in production
+    app.run() #debug should be False in production
