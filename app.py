@@ -113,7 +113,8 @@ def login():
     else:
         flash('My password totally isn\'t "password"')
     return render_template('login.html', error=error)
-app.route('/logout')
+
+@app.route('/logout')
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
