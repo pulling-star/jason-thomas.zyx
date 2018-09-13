@@ -34,6 +34,15 @@ def teardown_request(exception):
     if db is not None:
         db.close()
 
+@app.after_request
+def after_request(response):
+    response.headers.set('X-Content-Type-Options', 'nosniff')
+    response.headers.set('X-Frame-Options', 'DENY')
+    response.headers.set('X-XSS-Protection', '1; mode=block')
+    response.headers.set('Strict-Transport-Security', 'max-age=63072000')
+    #response.headers.set('Content-Security-Policy', 'default-src self')
+    return response
+
 @app.route('/')
 def show_current():
     session.pop('logged_in', None)
