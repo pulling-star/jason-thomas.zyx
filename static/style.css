@@ -71,7 +71,7 @@ form *{
 }
 
 li {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     list-style: none;
     padding-left:10px;
     border-left: 2px solid #BBB8B1;
@@ -83,6 +83,7 @@ li {
     margin-bottom: 0.125em;
     margin-top: 0.125em;
 }
+
 
 .archiveLink a {
     text-decoration: none;
