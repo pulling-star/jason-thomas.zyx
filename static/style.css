@@ -41,6 +41,10 @@ img {
     height: auto;
 }
 
+.no-scale {
+    width: auto;
+}
+
 form *{
     margin-top: 7px;
     margin-bottom: 7px;
