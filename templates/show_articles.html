@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
-  <p>These articles have interactive maps, charts or other elements</p>
+  <h2>These articles have interactive maps, charts or other elements</h2>
   <ul class=articles>
   {% set articles_length=interactive_articles|length %}
   {% if articles_length > 0 %}
     {% for article in interactive_articles|reverse() %}
       {% set this_article_i=article.db_order %}
       <li class=articleLink value=><a href="/article?articleNum={{this_article_i}}">
-          <h2>{{ article.title }}</h2></a> 
+          <h3>{{ article.title }}</h3></a> 
           <div class=publishedDetails>
             <p class=dateText>Originally published at</p>
             {{ article.link |safe }}
@@ -20,14 +20,14 @@
   {% endif %}
   </ul>
 
-  <p>I wrote many articles during my journalism career and here are some of the better ones.</p>
+  <h2>I wrote many articles during my journalism career and here are some of the better ones.</h2>
   <ul class=articles>
   {% set articles_length=non_interactive_articles|length %}
   {% if articles_length > 0 %}
     {% for article in non_interactive_articles|reverse() %}
       {% set this_article_i=article.db_order %}
       <li class=articleLink value=><a href="/article?articleNum={{this_article_i}}">
-          <h2>{{ article.title }}</h2></a> 
+          <h3>{{ article.title }}</h3></a> 
           <div class=publishedDetails>
             <p class=dateText>Originally published at</p>
             {{ article.link |safe }}

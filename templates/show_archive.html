@@ -5,7 +5,12 @@
   {% if entry_length > 0 %}
     {% for entry in entries|reverse() %}
       {% set this_entry_i=entry_length-loop.index %}
-      <li class=archiveLink value=><a href="/post?postNum={{this_entry_i}}"><p class=dateText>{{ entry.date|safe }}</p><h2>{{ entry.title }}</h2> <p>{{entry.text|striptags|truncate(100) }}</p></a>
+      <li class=archiveLink value=>
+        <a href="/post?postNum={{this_entry_i}}">
+          <p class=dateText>{{ entry.date|safe }}</p>
+          <h3>{{ entry.title }}</h3>
+          <p>{{entry.text|striptags|truncate(100) }}</p>
+        </a>
     {% endfor %}
   {% else %}
     <li><em>Why not say something?</em>
