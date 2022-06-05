@@ -1,0 +1,85 @@
+#initialForm{
+  max-width: 350px;
+  background-color: #F6F7E8;
+  padding-top: 62px;
+  margin: 0 auto;
+  margin-top:20px;
+  padding: 15px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #4C4C4C;
+}
+
+#submitBallot{
+	width:100%;
+	padding:10px;
+	text-align: center;
+	border:1px solid #868181;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+#innerForm{
+	margin:0 auto;
+	border:1px solid #868181;
+	padding: 15px;
+	font-size:1.43m
+}
+
+#ballotHeader{
+	text-align:center;
+	margin-bottom:20px;
+	margin-top:10px;
+	font-size: 1.2em;
+}
+
+#ballotInnerHeading {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 14px;
+	margin-top: 5px;
+    padding: 0;
+    line-height: 1em;
+}
+
+.choiceOption{
+	padding-top:10px;
+	padding-left:10px;
+	padding-bottom:8px;
+	width:100%;
+	display: inline-block;
+	cursor:pointer;
+}
+
+.numberBox{
+	height: 34px;
+	padding-left:10px;
+	width: 34px;
+	border:2px solid #868181;
+	float: left;
+	/*font-family: 'Shadows Into Light', cursive; */
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 1.2em;
+	color: #000;
+}
+
+.candidateDetails{
+	float: left;
+	margin:0px;
+	margin-left: 20px;
+	font-size:0.8em;
+}
+
+table{
+	text-align:center;
+	width:100%;
+}
+table td{
+	width:50%;
+	margin:2px;
+	border: 1px solid #000;
+	font-size: 130%;
+	padding:10px;
+	cursor: pointer;
+}

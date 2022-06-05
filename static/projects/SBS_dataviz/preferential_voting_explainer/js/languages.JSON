@@ -1,0 +1,164 @@
+var languageData = {
+"english": {
+	"mainHeading": "How does preferential voting work in Australia's House of Representatives?",
+	"firstAreaHeading": "Tap/click boxes to make your selection",
+	"selectionFail": "You did not make a valid vote. Please try again.",
+	"secondAreaHeading": "Counting the votes",
+	"buttons":{
+		"reset": "Reset",
+		"next": "Next",
+		"submit_ballot": "Submit"
+		},
+	"countHeading": [
+		"First count",
+		"Second count",
+		"Third count",
+		"Fourth count",
+		"Fifth count"
+		],
+	"countExplainer": [
+		"If a candidate gets more than half the votes in box 1 they win this seat. If no one wins more than 50 per cent of votes in box 1, a process of elimination begins.",
+		"The candidate with the fewest box 1 votes is excluded. This candidate's votes are then transferred to other candidates according to the second box voters ticked on the ballot papers for the excluded candidate.",
+		"If still no candidate has more than half the votes, the next candidate who now has the fewest votes is excluded.",
+		"This process continues until one candidate has more than 50 per cent of votes.",
+		"This process continues until one candidate has more than 50 per cent of votes."
+		],
+	"disclaimer": "NOTE: This graphic uses imitation data and SBS does not suggest voters of one party will favour or dislike any other.",
+	"howToVoteDetails": "More on how to vote this election at the <a href='http://www.aec.gov.au/about_aec/translated_information/' target='_blank'>AEC</a> website."
+	},
+"espanol": {
+	"mainHeading": "¿Cómo funciona la votación preferencial en la Cámara de Representantes de Australia?",
+	"firstAreaHeading": "Haga click en los cuadrados para elegir de 1 a 6",
+	"selectionFail": "Su voto no es válido. Por favor intente de nuevo.",
+	"secondAreaHeading": "Contando los votos",
+	"buttons":{
+		"reset": "Reiniciar",
+		"next": "Siguiente",
+		"submit_ballot": "Enviar"
+		},
+	"countHeading": [
+		"Primer conteo",
+		"Segundo conteo",
+		"Tercer conteo",
+		"Cuarto conteo",
+		"Quinto conteo"
+		],
+	"countExplainer": [
+		"Si un candidato obtiene más de la mitad de los votos en la casilla 1 ganan ese asiento. Si nadie gana más del 50 por ciento de los votos en la casilla 1, comienza un proceso de eliminación.",
+		"Se excluye el candidato con menor cantidad de votos en la caja 1. Los votos de este candidato se transfieren a otros candidatos de acuerdo con los votos en la segunda casilla en las papeletas del candidato excluido.",
+		"Si aún asi ningún candidato tiene más de la mitad de los votos, se elimina el próximo candidato que ahora tiene la menor cantidad de votos.",
+		"Este proceso continua hasta que un candidato tiene más del 50 por ciento de los votos.",
+		"Este proceso continua hasta que un candidato tiene más del 50 por ciento de los votos."
+		],
+	"disclaimer": "NOTA: Este gráfico utiliza datos ficticios y SBS no sugiere que los votantes de un partido favorezcan o no a ningún otro.",
+	"howToVoteDetails": "Más acerca de cómo votar en esta elección en el sitio web de <a href='http://www.aec.gov.au/about_aec/translated_information/' target='_blank'>AEC</a>."
+	},
+"vietnamese": {
+	"mainHeading": "Hệ thống ưu tiên trong lá phiếu bầu Hạ Viện Úc hoạt động như thế nào?",
+	"firstAreaHeading": "Chạm/nhấp chuột vô các ô để lựa chọn, từ 1 đến 6",
+	"selectionFail": "Bạn đã không bỏ phiếu hợp lệ. Vui lòng thử lại.",
+	"secondAreaHeading": "Đang kiểm phiếu",
+	"buttons":{
+		"reset": "Làm lại",
+		"next": "Tiếp tục",
+		"submit_ballot": "Gửi đi"
+		},
+	"countHeading": [
+		"Đếm lần đầu",
+		"Đếm lần thứ hai",
+		"Đếm lần thứ ba",
+		"Đếm lần thứ tư",
+		"Đếm lần thứ năm"
+		],
+	"countExplainer": [
+		"Nếu một ứng cử viên nhận được hơn một nửa số phiếu trong ô số 1, họ giành chiến thắng chiếc ghế này. Nếu không ai nhận được hơn 50 phần trăm số phiếu trong ô số 1, quá trình loại trừ bắt đầu.",
+		"Ứng cử viên có bầu chọn ô số 1 ít nhất bị loại trừ. Số phiếu của ứng cử viên này sẽ được chuyển cho các ứng cử viên khác, theo ô số 2 mà các cử tri đánh dấu trên tờ phiếu bầu cho ứng cử viên vừa bị loại trừ.",
+		"Nếu vẫn không có ứng cử viên nào có hơn một nửa số phiếu bầu, ứng cử viên tiếp theo có ít phiếu nhất sẽ bị loại trừ.",
+		"Tiến trình này tiếp tục cho đến khi một ứng cử viên có hơn 50 phần trăm số phiếu.",
+		"Tiến trình này tiếp tục cho đến khi một ứng cử viên có hơn 50 phần trăm số phiếu."
+		],
+	"disclaimer": "LƯU Ý: Đồ họa này sử dụng dữ liệu giả lập và SBS không đề nghị cử tri của một đảng sẽ ủng hộ hay không thích đảng nào khác.",
+	"howToVoteDetails": "Tìm thêm về cách bỏ phiếu trong bầu cử này tại trang mạng <a href='http://www.aec.gov.au/about_aec/translated_information/' target='_blank'>AEC</a>."
+	},
+"arabic": {
+	"mainHeading": "كيف يتم التصويت التفضيلي في مجلس النواب الأسترالي ؟",
+	"firstAreaHeading": "اضغط على المربعات بجوار اختياراتك بداية من 1 الى 6",
+	"selectionFail": "لم تقم بالتصويت بشكل صحيح , يرجى اعادة المحاولة",
+	"secondAreaHeading": "يتم عدّ الأصوات",
+	"buttons":{
+		"reset": "اعادة المحاولة",
+		"next": "التالي",
+		"submit_ballot": "أكمل"
+		},
+	"countHeading": [
+		"العدّ الأول",
+		"العدّ الثاني",
+		"العدّ الثالث",
+		"العدّ الرابع",
+		"العدّ الخامس"
+		],
+	"countExplainer": [
+		"لو حصل المرشح على نصف عدد الأصوات في المربع الأول يفوز بهذا المقعد و اذا لم يحصل أحد على 50% من عدد الأصوات في المربع الأول تبدأ عملية الاقصاء",
+		"المرشح الذي سيحصل على أقل عدد من الأصوات في المربع الأول سيتم استبعاده, هذا المرشح سيتم بعد ذلك نقله الى بقية المرشحين في المربع الثاني ",
+		"أذا ما لم يحصل أي مرشح على أكثر من نصف الأصوات فان المرشح الاخر صاحب الأصوات الأقل يتم اقصاؤه",
+		"هذه العملية تتواصل حتى حصول مرشح واحد على أكثر من 50% من الأصوات",
+		"هذه العملية تتواصل حتى حصول مرشح واحد على أكثر من 50% من الأصوات"
+		],
+	"disclaimer": "ملحوظة: الرسم التصويري هذا اظهار لرأي الزوار و أس بي أس لا تحاول التأثير على رأي الناخبين لصالح حزب على حساب اخر",
+	"howToVoteDetails": "<a href='http://www.aec.gov.au/about_aec/translated_information/' target='_blank'>AEC</a> المزيد من المعلومات عن كيفية التصويت في هذه الانتخابات متوفرة على ."
+	},
+"gujarati": {
+	"mainHeading": "ઓસ્ટ્રેલીયાના હાઉસ ઓફ રીપ્રેસેન્ટટેટીવ ના  પ્રતિનિધિઓ ચૂંટવા મતદાન કેવી રીતે કરવું ?",
+	"firstAreaHeading": "તમારી પસંદગી પ્રમાણે પ્રતિનિધિઓને એક થી છ નો ક્રમ આપવા , બોક્સ માં ક્રમ પ્રમાણે ટીક કરો",
+	"selectionFail": "તમારો મત માન્ય નથી . મહેરબાની કરીને ફરીથી પ્રયત્ન કરો.",
+	"secondAreaHeading": "મત ગણતરી",
+	"buttons":{
+		"reset": "રીસેટ",
+		"next": "આગળ",
+		"submit_ballot": "સબમિટ / દાખલ કરો "
+		},
+	"countHeading": [
+		"પ્રથમ ગણક",
+		"બીજું ગણક",
+		"ત્રીજું ગણક",
+		"ચોથું ગણક",
+		"પાંચમું ગણક"
+	],
+	"countExplainer": [
+		"જો પહેલા બોક્સ ના ઉમેદવાર ને 50% થી વધુ મત મળે તો તે વિજેતા થાય છે. પણ જો પહેલા બોક્સ ના કોઈ ઉમેદવાર ને 50 % જેટલા મત ન મળે તો બાદબાકી ની પ્રક્રિયા ચાલુ થાય છે.",
+		"પહેલા બોક્સ ના સૌથી ઓછા મત મેળવનાર ઉમેદવાર ને બાકાત કરવા માં આવે છે. આ ઉમેદવાર ના મત એ બીજા બોક્સ ના મત પ્રમાણે અન્ય ઉમેદવાર ને ટ્રાન્સફર કરવામાં આવે છે.",
+		"જો હજુ પણ કોઈ ઉમેદવાર અડધા કરતાં વધુ મતો ન મેળવી શકે તો , આગામી ઉમેદવાર જે હવે સૌથી ઓછા મત ધરાવે છે  તેને બાકાત  કરવામાં આવશે.",
+		"જ્યાં સુધી એક ઉમેદવાર ને 50% કરતાં વધુ મત ન મળે ત્યાં સુધી આ પ્રક્રિયા ચાલુ રહે છે.",
+		"જ્યાં સુધી એક ઉમેદવાર ને 50% કરતાં વધુ મત ન મળે ત્યાં સુધી આ પ્રક્રિયા ચાલુ રહે છે."
+		],
+	"disclaimer": "નોંધ : આ ગ્રાફિક એક કાલ્પનિક ડેટા છે અને SBS મતદારો  ને કોઈ પક્ષ ની તરફેણ કે વિરુદ્ધ જવાનું નથી સૂચવતું.",
+	"howToVoteDetails": "કેવી રીતે મતદાન કરવું આ અંગે ની વધુ વિગતો માટે  <a href='http://www.aec.gov.au/about_aec/translated_information/' target='_blank'>AEC</a> ની વેબસાઈટ નો સંપર્ક કરવો."
+	},
+"italian": {
+	"mainHeading": "Come funziona la distribuzione delle preferenze nel voto per la Camera dei Rappresentanti?",
+	"firstAreaHeading": "Clicca sulle caselle per assegnare le tue preferenze da 1 a 6",
+	"selectionFail": "Il tuo voto non è valido. Riprova.",
+	"secondAreaHeading": "Stiamo contando i voti",
+	"buttons":{
+		"reset": "Ricomincia",
+		"next": "Continua",
+		"submit_ballot": "Invia"
+		},
+	"countHeading": [
+		"Primo conteggio",
+		"Secondo conteggio",
+		"Terzo conteggio",
+		"Quarto conteggio",
+		"Quinto conteggio"
+		],
+	"countExplainer": [
+		"Se un candidato riceve più della metà dei voti nella casella 1 vince il seggio. Se nessun candidato ottiene più del 50 per cento dei voti nella casella 1, inizia un processo di eliminazione.",
+		"Il candidato con il minor numero di voti nella casella 1 viene escluso. I voti di questo candidato vengono trasferiti ad altri candidati, in base a qual è la seconda casella contrassegnata sulle schede elettorali per il candidato escluso.",
+		"Se nessun candidato ha ancora più della metà dei voti, il candidato successivo che ora ha il minor numero di voti viene a sua volta escluso.",
+		"Questo processo continua finché un candidato ha più del 50 per cento dei voti.",
+		"Questo processo continua finché un candidato ha più del 50 per cento dei voti."
+		],
+	"disclaimer": "NOTA: Questo grafico usa dati di fantasia e SBS non intende dare indicazioni su come gli elettori e le elettrici di un partito possono distribuire le loro preferenze.",
+	"howToVoteDetails": "Per ulteriori informazioni su come si vota, visita il sito <a href='http://www.aec.gov.au/about_aec/translated_information/' target='_blank'>AEC</a>"
+	}
+}

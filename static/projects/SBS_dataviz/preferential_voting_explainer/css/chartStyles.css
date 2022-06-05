@@ -1,0 +1,55 @@
+.c3-grid {
+	opacity: 1
+}
+.c3-axis-x line  {
+	opacity: 0;
+}	
+.c3-axis-y line  {
+	opacity: 0.3;
+}			
+.c3-axis-x path.domain  {
+   opacity: 0;
+}
+.c3-axis-y path.domain  {
+   opacity: 0;
+}		
+.regionY{
+	background-color: #C9CCD6
+}
+/*
+#chartExplainerOne, #chartExplainerTwo, #chartExplainerThree{
+	font-size:1.05em;
+}
+*/
+#mainHeader{
+	font-size:1.4em;
+}
+#countHeading{
+	margin-left:10px;
+	font-size:1.1em;
+}
+#countExplainerText{
+	/*
+	font-size:1.05em;
+	*/
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:20px;
+}
+table{
+	text-align:center;
+	width:100%;
+}
+table td{
+	width:50%;
+	margin:2px;
+	border: 1px solid #000;
+	font-size: 130%;
+	padding:10px;
+	cursor: pointer;
+}
+
+/*The first should rightfully be on the other stylesheet, but that seemed inefficient. */
+#firstAreaHeading, #secondAreaHeading{
+	font-size:1.1em;
+}

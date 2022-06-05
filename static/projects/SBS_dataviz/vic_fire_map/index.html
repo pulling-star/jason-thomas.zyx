@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Scaled points</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<link href='leaflet-0.7.5/leaflet.css' rel='stylesheet' />
+<link href='css/styles.css' rel='stylesheet' />
+<link href='css/datavizStyle.css' rel='stylesheet' />
+<script src='js/d3.min.js'></script>
+<script src="leaflet-0.7.5/leaflet.js"></script>
+<script src='js/jquery-2.1.4.min.js'></script>
+<script src="js/moment.min.js"></script>
+<script src="js/numeral.min.js"></script>
+</head>
+<body>
+
+<div id="content">
+	<div id='map'></div>
+	<div id="buttonBox">
+		<h2 id="timePanel" alt="Time"></h2>
+		<div id="clearDiv"></div>
+		<div id="timeScale"></div>
+		<h4 id="explainerText"></h4>
+		<p>NOTE: The times on this map reflect when fire services accessed geospatial data, and are indicative of where the fire was.</p>
+		<p>SOURCE: Country Fire Association, Victoria. See <a href="https://gist.github.com/JasonThomasData/987c522ecf3b30b3d85a" target="_blank">data and methods</a>.</p>
+	</div>
+</div>
+<div id="next" alt="Next"></div>
+<div id="previous" alt="Previous"></div>
+<script src='js/map.js'></script>
+<script src="js/buttonTextControl.js"></script>
+<script src='js/timeScale.js'></script>
+<script src='js/main.js'></script>
+<script src="../../../iframeResizer.contentWindow.min.js"></script><br>
+</body>
+</html>

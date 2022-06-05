@@ -1,0 +1,41 @@
+#yearDisplay{
+	font-size: 1.2em;
+	color: #1A7D6C;
+	letter-spacing: 0.5px;
+}
+#ageSlider{
+	margin: 20px 20px;
+}
+
+h1,h2,h3,h4{
+	color: #505050 !important;
+}
+.ui-slider-handle .ui-state-default .ui-corner-all{
+	cursor: pointer;
+}
+textPath{
+	color: #6B6A6A;
+}
+.c3-grid {
+	opacity: 0.4
+}
+.c3-axis-x line  {
+	opacity: 0;
+}	
+.c3-axis-y line  {
+	opacity: 0.3;
+}			
+.c3-axis-x path.domain  {
+   opacity: 0;
+}
+.c3-axis-y path.domain  {
+   opacity: 0;
+}		
+.regionY{
+	background-color: #C9CCD6
+}
+.ui-slider .ui-slider-handle{
+	width: 1.7em;
+	height: 1.7em;
+	top: -.5em;
+}

@@ -1,0 +1,78 @@
+body { 
+	margin:0; 
+	padding:0;
+}
+
+#map {
+	height:500px;
+	width:100%;
+}
+
+#chartContainer{
+	margin-top:10px;
+}
+
+.highlightText{
+	color: #AB1E1E;
+}
+
+#previous, #next{
+	height:50px;
+	width:50px;	
+	position:absolute;
+	top: 210px;	
+	cursor: pointer;
+}
+
+#previous{
+	background-image: url(images/backButton_50x100.png);
+	background-position: 0px 50px;
+	left: 10px;
+}
+
+#next{
+	background-image: url(images/forwardButton_50x100.png);
+	background-position: 0px 50px;
+	right: 10px;	
+}
+
+#timePanel{
+	margin-right: 10px;
+}
+
+#clearDiv{ 
+	clear: both;
+}
+
+#buttonBox {
+	padding: 10px;
+}
+
+.dot{
+	cursor: pointer;
+}
+
+.leaflet-clickable{
+	cursor: -webkit-grab;
+}
+
+
+@media screen and (max-width: 585px) {
+	#map{height: 550px;}
+}
+@media screen and (max-width: 550px) {
+	//#map{height: 520px;}
+	#map{height: 470px;}
+}
+@media screen and (max-width: 450px) {
+	//#map{height: 490px;}
+	#map{height: 420px;}
+}
+@media screen and (max-width: 350px) {
+	//#map{height: 470px;}
+	#map{height: 390px;}
+}
+@media screen and (max-width: 300px) {
+	//#map{height: 450px;}
+	#map{height: 350px;}
+}
