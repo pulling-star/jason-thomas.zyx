@@ -62,7 +62,6 @@ body {
 h1, h2, h3 {
     font-family: "HelveticaNeueW01-75Bold","Helvetica",Arial,"times new roman",serif;
     -webkit-font-smoothing: antialiased;
-    font-size: 16px;
     line-height: 16px;
     letter-spacing: 0px;
     color: #262626;
@@ -73,7 +72,6 @@ h1, h2, h3 {
 h4 {
     font-family: "HelveticaNeueW01-75Bold","Helvetica",Arial,"times new roman",serif;
     -webkit-font-smoothing: antialiased;
-    font-size: 14px;
     line-height: 16px;
     letter-spacing: 0px;
     color: #262626;
@@ -88,7 +86,6 @@ h4 {
 h5 {
     font-family: "HelveticaNeueW01-75Bold","Helvetica",Arial,"times new roman",serif;
     -webkit-font-smoothing: antialiased;
-    font-size: 12px;
     line-height: 16px;
     letter-spacing: 0px;
     color: #3d3b3b;
@@ -103,7 +100,6 @@ p, text, td, th {
     margin-bottom: 10px;
     font-weight: normal;
     font-style: normal;
-    font-size: 14px;
     line-height: 16px;
     letter-spacing: 0px;
     color: #3d3b3b;
@@ -113,7 +109,6 @@ p, text, td, th {
     font-family: "HelveticaNeueW02-45Ligh","Helvetica",Arial,"times new roman",serif;
     -webkit-font-smoothing: antialiased;
     text-align: left;
-    font-size: 11px;
     text-transform: uppercase;
 }
 a, a:hover {
@@ -139,7 +134,6 @@ a, a:hover {
     box-sizing: border-box;
     position: relative;
     height: 26px;
-    font-size: 14px;
     line-height: 16px;
     letter-spacing: 0px;
     font-weight: normal;
@@ -246,7 +240,6 @@ button, .button {
     margin-right: 23px;
     font-weight: normal;
     font-style: normal;
-    font-size: 12px;
     line-height: 24px;
     letter-spacing: 0px;
     background: transparent;

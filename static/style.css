@@ -85,7 +85,7 @@ li {
     margin-bottom: 1em;
     list-style: none;
     padding-left:10px;
-    border-left: 2px solid #BBB8B1;
+    border-left: 3px solid #BBB8B1;
     margin-left:10px;
 }
 
@@ -168,7 +168,6 @@ ul{
 .dateText{
     margin-bottom:0px;
     color: #7B776D;
-    font-size:90%;
 }
 
 .publishedDetails p {
@@ -191,17 +190,17 @@ ul{
 }
 
 h1 {
-  font-size: 4.0vh;
+  font-size: 3.8vh;
 }
 h2 {
-  font-size: 4.0vh;
+  font-size: 3.5vh;
 }
 h3 {
-  font-size: 3.6vh;
+  font-size: 3.1vh;
 }
 h4 {
-  font-size: 3.2vh;
+  font-size: 2.7vh;
 }
 p, a, code, li {
-  font-size: 2.7vh;
+  font-size: 2.2vh;
 }
