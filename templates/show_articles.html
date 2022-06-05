@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+  <p>These articles have interactive maps, charts or other elements</p>
+  <ul class=articles>
+  {% set articles_length=interactive_articles|length %}
+  {% if articles_length > 0 %}
+    {% for article in interactive_articles|reverse() %}
+      {% set this_article_i=article.db_order %}
+      <li class=articleLink value=><a href="/article?articleNum={{this_article_i}}">
+          <h2>{{ article.title }}</h2></a> 
+          <div class=publishedDetails>
+            <p class=dateText>Originally published at</p>
+            {{ article.link |safe }}
+            <p class=dateText> on {{ article.date|safe }}</p>
+          </div>
+          <p>{{article.text|striptags|truncate(100) }}</p>
+    {% endfor %}
+  {% else %}
+    <li><em>Why not say something?</em>
+  {% endif %}
+  </ul>
+
+  <p>I wrote many articles during my journalism career and here are some of the better ones.</p>
+  <ul class=articles>
+  {% set articles_length=non_interactive_articles|length %}
+  {% if articles_length > 0 %}
+    {% for article in non_interactive_articles|reverse() %}
+      {% set this_article_i=article.db_order %}
+      <li class=articleLink value=><a href="/article?articleNum={{this_article_i}}">
+          <h2>{{ article.title }}</h2></a> 
+          <div class=publishedDetails>
+            <p class=dateText>Originally published at</p>
+            {{ article.link |safe }}
+            <p class=dateText> on {{ article.date|safe }}</p>
+          </div>
+          <p>{{article.text|striptags|truncate(100) }}</p>
+    {% endfor %}
+  {% else %}
+    <li><em>Why not say something?</em>
+  {% endif %}
+  </ul>
+
+{% endblock %}

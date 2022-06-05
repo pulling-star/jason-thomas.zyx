@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if articles|length > 0 %}
+    <div class=publishedDetails>
+      <p class=dateText>Originally published at</p>
+      {{ articles[articleNum].link |safe }}
+      <p class=dateText> on {{ articles[articleNum].date|safe }}</p>
+    </div>
+    <h2>{{ articles[articleNum].title }}</h2>
+    {{ articles[articleNum].text|safe }}
+  {% else %}
+    <em>Why not say something?</em>
+  {% endif %}    
+{% endblock %}

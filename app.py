@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
 # all the imports
+#from msilib.schema import Error
+import re
 import sqlite3, datetime, mistune, os
+from zipapp import get_interpreter
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
 
@@ -10,17 +13,37 @@ template_path = os.path.join(this_dir, 'templates')
 
 app = Flask(__name__, template_folder=template_path)
 app.config.from_pyfile('config_file.cfg')
-app.config['DATABASE'] = os.path.join(this_dir, 'blogPosts.db')
+app.config['DATABASE'] = os.path.join(this_dir, 'content.db')
 
 #Looks for the SQL file in the config block above -- blogPosts.db
 def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
 
-def getSqlRecords():
-    cursor = g.db.execute('select title, entryDate, text from entries order by id asc')
+def get_sql_records(table):
+    if table == "articles":
+        cursor = g.db.execute('select title, publishDate, link, text, interactive from articles order by id asc')
+        articles = [dict(title=row[0], date=row[1], link=row[2], text=row[3], interactive=row[4]) for row in cursor.fetchall()]
+        return articles
+    elif table == "entries":
+        cursor = g.db.execute('select title, entryDate, text from entries order by id asc')
+        entries = [dict(title=row[0], date=row[1], text=row[2]) for row in cursor.fetchall()]
+        return entries
+    else:
+        raise sqlite3.DatabaseError
     #Entries entered as a param into the show_current.html template.
-    entries = [dict(title=row[0], date=row[1], text=row[2]) for row in cursor.fetchall()]
-    return entries
+
+def sort_articles(articles):
+    interactive_articles = []
+    non_interactive_articles = []
+    for i, article in enumerate(articles):
+        article["db_order"] = i
+        if article["interactive"] == 1:
+            interactive_articles.append(article)
+        elif article["interactive"] == 0:
+            non_interactive_articles.append(article)
+        else:
+            raise AttributeError("The database doesn't have interactive flag")
+    return interactive_articles, non_interactive_articles
 
 @app.before_request
 def before_request():
@@ -46,7 +69,7 @@ def after_request(response):
 @app.route('/')
 def show_current():
     session.pop('logged_in', None)
-    entries = getSqlRecords()
+    entries = get_sql_records("entries")
     showPost = len(entries)-1
     return render_template('show_current.html', entries=entries, postNum=showPost)
 
@@ -58,8 +81,18 @@ def show_post():
     if qString != None:
         postNum = int(qString)
     session.pop('logged_in', None)
-    entries = getSqlRecords()
+    entries = get_sql_records("entries")
     return render_template('show_current.html', entries=entries, postNum=postNum)
+
+@app.route('/article', methods=['GET','POST'])
+def show_article():
+    qString = request.args.get('articleNum')
+    global articleNum
+    if qString != None:
+        articleNum = int(qString)
+    session.pop('logged_in', None)
+    articles = get_sql_records("articles")
+    return render_template('show_article.html', articles=articles, articleNum=articleNum)
 
 @app.route('/about')
 def about():
@@ -73,29 +106,52 @@ def my_work():
 
 @app.route('/add', methods=['POST'])
 def add_entry():
+    table = request.form['tableSelect']
+
     if len(request.form['title']) <= 0:
         flash('Add a title, dummy')
-    elif len(request.form['text']) <= 0:
+    if len(request.form['text']) <= 0:
         flash('Um, you don\'t have any text. Try harder.')    
-    else:
-        if not session.get('logged_in'):
-            abort(401)
+    if not session.get('logged_in'):
+        abort(401)
+
+    title = request.form['title']
+    formattedText = mistune.markdown(request.form['text'], escape=False)
+    #You need to have escape=False for Mistune to leave HTML tags alone. You will need to turn this off if you provide untrusted users with a text box
+    if table == 'articles':
+        publishDate = request.form['published']
+        formattedLink = mistune.markdown(request.form['link'], escape=False)
+        g.db.execute('insert into articles (title, publishDate, link, text) values (?, ?, ?, ?)',
+                    [title, publishDate, formattedLink, formattedText])
+    elif table == 'entries':
         timeNow = datetime.datetime.now()
         readTime = datetime.datetime.strptime(str(timeNow),'%Y-%m-%d %H:%M:%S.%f')
         formattedTime = datetime.datetime.strftime(readTime,'%B %d, %Y @ %H:%M')
-        formattedText = mistune.markdown(request.form['text'], escape=False)
-        #You need to have escape=False for Mistune to leave HTML tags alone. You will need to turn this off if you provide untrusted users with a text box
         g.db.execute('insert into entries (title, entryDate, text) values (?, ?, ?)',
-                     [request.form['title'], formattedTime, formattedText])
-        g.db.commit()
-        flash('New entry was successfully posted')
+                    [title, formattedTime, formattedText])
+    else:
+        raise sqlite3.DatabaseError
+
+    g.db.commit()
+    flash('Check it updated')
+
     return redirect(url_for('cms'))
 
 @app.route('/archive')
 def show_archive():
     session.pop('logged_in', None)
-    entries = getSqlRecords()
+    entries = get_sql_records("entries")
     return render_template('show_archive.html', entries=entries)
+
+@app.route('/articles')
+def show_articles():
+    session.pop('logged_in', None)
+    articles = get_sql_records("articles")
+    interactive_articles, non_interactive_articles = sort_articles(articles)
+    print(non_interactive_articles[1]["db_order"])
+    return render_template('show_articles.html',
+                            interactive_articles=interactive_articles,
+                            non_interactive_articles=non_interactive_articles)
 
 @app.route('/cms')
 def cms():

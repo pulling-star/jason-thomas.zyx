@@ -2,11 +2,22 @@
 {% block body %}
   {% if session.logged_in %}
     <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <select class="form-control" name="tableSelect" id="tableSelect">
+          <option value="entries">Entries</option>
+          <option value="articles">Articles</option>
+      </select>
       <dl>
         <dt>Title:
         <dd><input type=text size=30 name=title>       
         <dt>Text:
         <dd><textarea name=text rows=5 cols=40></textarea>
+        <div class="breakout">
+          Only use this for articles, it's ignored for blogposts <br> 
+          Published date:
+          <input type=text size=30 name=published>
+          Link:
+          <input type=text size=30 name=link value="[name](link)">
+        </div>
         <dd><input type=submit value=Share>
       </dl>
     </form>
