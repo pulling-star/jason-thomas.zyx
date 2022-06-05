@@ -1,4 +1,18 @@
-Personal blog site - will be posting about Python, things I learn with code, unicycles, etc.
+#### 2022 update
+
+Reading this code now, wow what a shocker. I have thought about pressing the nuke button on this blog but have always ended up making small changes. Someday I should do a proper refactor if I'm going to keep this. This was my first web app so it's not that bad, but not great.
+
+#### Creating DB
+
+`./init_db.py`
+
+#### Using iframes
+
+This site makes use of the project `iframeResizer`. 
+
+Be sure to include the `iframeResizer.contentWindow.min.js` in the loaded page and define the iframe with no scrolling, like ```<iframe ... scrolling="no></iframe>```. There should already be a style to set the iframe to have width:100%
+
+### Project
 
 This site is hosted from a VPS - I'd probably prefer to use Heroku otherwise, but this allowed me to learn how Linux, Apache2 and virtual hosts interact.
 
