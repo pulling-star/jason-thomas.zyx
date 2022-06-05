@@ -198,4 +198,4 @@ def all_exceptions(error):
     return error 
 
 if __name__ == '__main__':
-    app.run() #debug should be False in production
+    app.run() # THis doesn't get called in PRD, see wsgi.py file 
