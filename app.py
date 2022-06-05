@@ -11,6 +11,7 @@ template_path = os.path.join(this_dir, 'templates')
 
 app = Flask(__name__, template_folder=template_path)
 app.config.from_pyfile('config_file.cfg')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY') #Check config vars for provider
 app.config['DATABASE'] = os.path.join(this_dir, 'content.db')
 
 #Looks for the SQL file in the config block above -- blogPosts.db
