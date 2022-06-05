@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-# all the imports
-#from msilib.schema import Error
 import re
 import sqlite3, datetime, mistune, os
 from zipapp import get_interpreter
@@ -194,6 +192,10 @@ def logout():
 def pageNotFound(error):
     session.pop('logged_in', None)
     return render_template('404.html')
+
+@app.errorhandler(Exception)
+def all_exceptions(error):
+    return error 
 
 if __name__ == '__main__':
     app.run() #debug should be False in production
