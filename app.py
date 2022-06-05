@@ -195,7 +195,7 @@ def pageNotFound(error):
 
 @app.errorhandler(Exception)
 def all_exceptions(error):
-    return error 
+    print(error)
 
 if __name__ == '__main__':
     app.run() # THis doesn't get called in PRD, see wsgi.py file 
