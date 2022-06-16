@@ -1,26 +1,26 @@
-candidateList = [
+[
 	{
-		name: 'Candidate 1',
-		party:"LABOR"
+		"name": "Candidate 1",
+		"party":"LABOR"
 	},
 	{
-		name: 'Candidate 2',
-		party:"LIBERAL"
+		"name": "Candidate 2",
+		"party":"LIBERAL"
 	},
 	{
-		name: 'Candidate 3',
-		party:"INDEPENDENT"
+		"name": "Candidate 3",
+		"party":"INDEPENDENT"
 	},
 	{
-		name: 'Candidate 4',
-		party:"GREENS"
+		"name": "Candidate 4",
+		"party":"GREENS"
 	},
 	{
-		name: 'Candidate 5',
-		party:"NATIONALS"
+		"name": "Candidate 5",
+		"party":"NATIONALS"
 	},
 	{
-		name: 'Candidate 6',
-		party:"INDEPENDENT"
+		"name": "Candidate 6",
+		"party":"INDEPENDENT"
 	}
 ]
