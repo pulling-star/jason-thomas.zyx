@@ -1,3 +1,4 @@
 venv/
 config_file.cfg
+__pycache__/
 
