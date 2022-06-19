@@ -1,0 +1,9 @@
+[submodule "static/tools/globeSVGdownload"]
+	path = static/tools/globeSVGdownload
+	url = git@github.com:JasonThomasData/globeSVGdownload.git
+[submodule "static/tools/NoMoreTablesGenerator"]
+	path = static/tools/NoMoreTablesGenerator
+	url = git@github.com:JasonThomasData/NoMoreTablesGenerator.git
+[submodule "static/projects/IDPNetworkGraph"]
+	path = static/projects/IDPNetworkGraph
+	url = git@github.com:JasonThomasData/IDPNetworkGraph.git
