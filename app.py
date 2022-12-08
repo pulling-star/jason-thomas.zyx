@@ -5,6 +5,7 @@ import sqlite3, datetime, mistune, os
 from zipapp import get_interpreter
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
+import math_markdown, math_highlighter
 
 this_dir = os.path.dirname(__file__)
 template_path = os.path.join(this_dir, 'templates')
@@ -110,15 +111,19 @@ def add_entry():
         flash('Add a title, dummy')
     if len(request.form['text']) <= 0:
         flash('Um, you don\'t have any text. Try harder.')    
-    if not session.get('logged_in'):
-        abort(401)
+    #if not session.get('logged_in'):
+    #    abort(401)
+
+    markdown_renderer = math_markdown.MarkdownWithMath(renderer=math_highlighter.HighlighterRenderer(escape=False))
 
     title = request.form['title']
-    formattedText = mistune.markdown(request.form['text'], escape=False)
-    #You need to have escape=False for Mistune to leave HTML tags alone. You will need to turn this off if you provide untrusted users with a text box
+    formattedText = markdown_renderer.render(request.form['text'])
+
+    print(formattedText)
+
     if table == 'articles':
         publishDate = request.form['published']
-        formattedLink = mistune.markdown(request.form['link'], escape=False)
+        formattedLink = markdown_renderer.render(request.form['link'])
         g.db.execute('insert into articles (title, publishDate, link, text) values (?, ?, ?, ?)',
                     [title, publishDate, formattedLink, formattedText])
     elif table == 'entries':

@@ -189,6 +189,14 @@ ul{
     color: #D13F31;
 }
 
+.MJX-TEX * {
+    padding: 1px;
+}
+
+.mjx-n * {
+    padding: 1px;
+}
+
 h1 {
   font-size: 3.8vh;
 }
